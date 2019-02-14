@@ -6,6 +6,7 @@
 
 #3. Write out the truth tables of each Boolean operator (that is, every possible combination of Boolean values for the operator and what they evaluate to).
     #true and true, true or false, not true == True
+    #xor is exclusive or(look it up)
 
 #4. What do the following expressions evaluate to?
 
@@ -20,8 +21,10 @@
 #5. What are the six comparison operators?
     #<, >, ==, !=, <=, >=
 
+
+
 #6. What is the difference between the equal to operator and the assignment operator?
-    #equal to compares statements and the assingment operator assigns values
+    #equal to compares statements and the assingment operator assigns values or anytime you need to make a switch in the control flow
 
 #7. Explain what a condition is and where you would use one.
     #a condition is a statement that runs if the requirments are satisfied

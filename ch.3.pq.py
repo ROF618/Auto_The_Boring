@@ -9,7 +9,7 @@
     #def()
 
 #4. What is the difference between a function and a function call?
-    #The function defines a set of instructions to complete and the function call executes said set of instructions
+    #The function defines a set of instructions to complete and the function call executes said set of instructions; a call only exist at run time
 
 #5. How many global scopes are there in a Python program? How many local scopes?
     #1 global scopes and many local scopes
