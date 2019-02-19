@@ -1,19 +1,15 @@
 def collatz(number):
     if number % 2 == 0:
-        return print(number)
+        return number // 2
     else:
-        return print(3 * number +1)
-
-collatz(2)
+        return 3 * number + 1
 
 def user_input_redux():
     print("please input a number")
-    user_input = input()
-
+    user_input = int(input())
     while user_input != 1:
-        try:
-            user_input = collatz(int(user_input))
-        except:
-            print("something went wrong")
+        if user_input == 1:
             break
+        user_input = collatz(user_input)
+        print(user_input)
 user_input_redux()
