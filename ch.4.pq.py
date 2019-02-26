@@ -52,3 +52,6 @@
 
 #17. What is the difference between copy.copy() and copy.deepcopy()?
     #deepcopy can copy the list within a list
+
+
+#look up paralel list comprihension
