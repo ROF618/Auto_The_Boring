@@ -28,6 +28,6 @@ def printTable(l):
         for i in item:
             len_of_items.append(int(len(i)))
     print(max(len_of_items))
-        #print(item)
+
 
 printTable(tableData)

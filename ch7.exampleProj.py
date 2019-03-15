@@ -3,7 +3,8 @@
 #? means optional in regex unless its after {}
 #^ means not the range specified but if it used at the beginning of the range it specifies that the information that is being looked for needs to be at the beginning
 #when | key is used in the second part of the regex expression e.g (re.compile('foo', re.IGNORECASE | re.DOTALL) to specify that you want both of the directives to execute on the expression
-import pyperclip, re
+import pyperclip
+import re
 
 phoneRegex = re.compile(r'''(
     (\d{3}|\(\d{3}\))?                # area code
@@ -12,7 +13,7 @@ phoneRegex = re.compile(r'''(
     (\s|-|\.)                         # separator
     (\d{4})                           # last 4 digits
     (\s*(ext|x|ext.)\s*(\d{2,5}))?    # extension
-    )''', re.VERBOSE)group())
+    )''', re.VERBOSE)
 
 emailRegex = re.compile(r'''(
       [a-zA-Z0-9._%+-]+      # username
@@ -23,14 +24,14 @@ emailRegex = re.compile(r'''(
 
 
 # Find matches in clipboard text.
-   text = str(pyperclip.paste())
- matches = []
- for groups in phoneRegex.findall(text):
+text = str(pyperclip.paste())
+matches = []
+for groups in phoneRegex.findall(text):
        phoneNum = '-'.join([groups[1], groups[3], groups[5]])
        if groups[8] != '':
-           phoneNum += ' x' + groups[8]
+           phoneNum += ' x' + groups[  8]
        matches.append(phoneNum)
- for groups in emailRegex.findall(text):
+for groups in emailRegex.findall(text):
        matches.append(groups[0])
 
 # Copy results to the clipboard.
