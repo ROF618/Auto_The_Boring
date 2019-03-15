@@ -90,15 +90,6 @@ def addToInventory(inventory, addedItems):
             inventory.setdefault(item, 1)
 
     print(inventory.items())
-    #for k, v in inventory.items():
-        #if k in addedItems:
-            #v = v + 1
-            #print(k + ": " + str(v))
-        #else:
-            #print(v)
-
-    #for addedItems in inventory.key():
-        #print(addedItems)
 
 
 addToInventory(inv, dragonLoot)
