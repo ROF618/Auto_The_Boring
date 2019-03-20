@@ -22,16 +22,12 @@ def CheckStrength(s):
     StrRegexDigitCheck = re.compile(r'(\d){1}')
     StrRegexLengthCheck = re.compile(r'(\w){8}')
 
-    test = [StrRegexUpperCheck, StrRegexLowerCheck, StrRegexDigitCheck, StrRegexLengthCheck]
-    try:
-        for i in test:
-            print(i.search(s))
-    except:
-        print('That didnt work')
+    RegexList = [StrRegexUpperCheck, StrRegexLowerCheck, StrRegexDigitCheck, StrRegexLengthCheck]
+    for char in RegexList:
+        if char.search(s) == None:
+            return print('That doesn\'t work')
 
+    print('This Password will work')
 
-    #greedyHaRegex = re.compile(r'(Ha){3,5}')
-    #mo1 = greedyHaRegex.search(s)
-    #print(mo1.group())
 
 CheckStrength('Volcom24')
