@@ -1,0 +1,2 @@
+def MadLibMaker(IncomingText):
+    
