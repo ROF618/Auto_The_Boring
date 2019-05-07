@@ -12,6 +12,10 @@ mcbShelf = shelve.open('mcb')
 if len(sys.argv) == 3 and sys.argv[1].lower() == 'save':
     mcbShelf[sys.argv[2]] = pyperclip.paste()
     print(sys.argv)
+
+#removing the keys with a delete keyword
+elif len(sys.argv) == 3 and sys.argv[1].lower() == 'delete':
+
 elif len(sys.argv) == 2:
     print(len(sys.argv))
     #List Keywords and load content
