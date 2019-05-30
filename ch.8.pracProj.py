@@ -14,27 +14,23 @@ def MadLibMaker(IncomingText):
         if NounCheck.search(char) is not None:
             print("Please input a Noun")
             userNoun = input()
-            print(userNoun)
             userInput.append(userNoun)
         elif ADJectiveCheck.search(char) is not None:
             print("Please input a adjective")
             userAdjective = input()
-            print(userAdjective)
             userInput.append(userAdjective)
         elif ADVCheck.search(char) is not None:
             print("Please input a Adverb")
             userADV = input()
-            print(userADV)
             userInput.append(userADV)
         elif VerbCheck.search(char) is not None:
             print("Please input a Verb")
             userVerb = input()
-            print(userVerb)
             userInput.append(userVerb)
         else:
             userInput.append(char)
 
-    print(userInput.sort(','))
+    print(' '.join(userInput))
 
 
 
