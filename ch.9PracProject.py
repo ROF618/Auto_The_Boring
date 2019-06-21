@@ -20,7 +20,7 @@ As an added challenge, write another program that can insert gaps into numbered 
 
 
 import os
-#change after the os.walk to another folder to get .whatever file needed
+#find how to get the files extensions from the folder traversing loop
 for folderName, subfolders, filenames in os.walk('/home/chris/Videos'):
-    print(filenames)
+    print(os.extsep('filenames'))
 
