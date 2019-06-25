@@ -19,8 +19,13 @@ As an added challenge, write another program that can insert gaps into numbered 
 """
 
 
-import os
+import os, pyperclip
 #find how to get the files extensions from the folder traversing loop
-for folderName, subfolders, filenames in os.walk('/home/chris/Videos'):
-    print(os.extsep('filenames'))
-
+#extResults = []
+for folderName, subfolders, filenames in os.walk('/home/chris/Pictures'):
+    for file in filenames:
+        splitString = str(file).split(sep='.')
+        if splitString.pop(1) == "jpg":
+            #need to copy the directory the file is currently located in and the use pyperclip.paste method to put file in new directory
+            pyperclip.copy(file)
+#print(extResults)
