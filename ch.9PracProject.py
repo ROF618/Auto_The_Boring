@@ -55,8 +55,9 @@ def findLargeFile(StartDirectory):
 
 #findLargeFile('/home/chris/Pictures')
 
-def findPreFix(Direc):
-    for file in os.scandir(Direc):
-        print(file)
+def findPreFix(Direc, Prefix):
+    for file in os.listdir(Direc):
+        if file[:len(Prefix)] == Prefix:
+            print(file)
 
-findPreFix('/home/chris/Pictures/')
+findPreFix('/home/chris/Pictures/', '155')
